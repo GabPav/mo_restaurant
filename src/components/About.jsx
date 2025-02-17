@@ -5,7 +5,7 @@ const About = ({ showIntro = true, imageSrc, title, description }) => {
       {showIntro && (
         <div className="text-center pt-10">
           <h2 className="text-4xl font-semibold mb-6 font-[Cardo] text-gray-700">
-            Discover the Art of Fine Dining at 
+            Discover the Art of Fine Dining at
             <span className="font-[Parisienne] text-amber-400"> Maison de l'Orchidée</span>
           </h2>
           <p className="text-lg text-gray-700 mb-8 font-[Cardo]">
@@ -16,7 +16,7 @@ const About = ({ showIntro = true, imageSrc, title, description }) => {
 
       {/* Section with image and text */}
       <div className="flex flex-col md:flex-row items-center justify-center gap-12 w-full">
-        {/* Slika */}
+        {/* Image */}
         <div className="w-full md:w-1/2 flex justify-center">
           <img
             src={imageSrc}

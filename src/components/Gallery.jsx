@@ -61,7 +61,7 @@ const Gallery = () => {
         <div className="absolute left-0 top-0 bottom-0 w-10 bg-gradient-to-r from-white to-transparent pointer-events-none hidden sm:block"></div>
         
         {/* Image slider */}
-        <div ref={scrollRef} className="flex overflow-x-scroll scrollbar-hide space-x-2 w-full">
+        <div ref={scrollRef} className="flex overflow-hidden space-x-2 w-full">
           {images.map((image, index) => (
             <motion.div key={index} className="flex-shrink-0" style={{ minWidth: "33.33%", maxWidth: "33.33%" }}>
               <img src={image.src} alt={image.alt} className="h-[400px] w-full object-cover" />
