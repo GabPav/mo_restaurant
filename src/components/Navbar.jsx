@@ -19,6 +19,12 @@ const Navbar = () => {
     return () => document.removeEventListener("click", handleClickOutside);
   }, []);
 
+  // Funkcija za zatvaranje menija nakon klika na link
+  const handleLinkClick = () => {
+    setDropdownOpen(false);
+    setMobileDropdownOpen(false);
+  };
+
   return (
     <header className="fixed top-0 left-0 right-0 w-full z-50 bg-white shadow-md px-8 md:px-32 h-20 flex items-center justify-between">
       {/* Left Navigation - Desktop */}
@@ -31,6 +37,7 @@ const Navbar = () => {
           <Link
             key={item.name}
             to={item.path}
+            onClick={handleLinkClick} // Zatvori meni nakon klika
             className="relative cursor-pointer text-gray-700 transition-all after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[1px] after:bg-amber-400 after:scale-x-0 hover:after:scale-x-100 after:origin-left after:transition-transform after:duration-300 font-[Cardo]"
           >
             {item.name}
@@ -52,6 +59,7 @@ const Navbar = () => {
           <Link
             key={item.name}
             to={item.path}
+            onClick={handleLinkClick} // Zatvori meni nakon klika
             className="relative cursor-pointer text-gray-700 transition-all after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[1px] after:bg-amber-400 after:scale-x-0 hover:after:scale-x-100 after:origin-left after:transition-transform after:duration-300 font-[Cardo]"
           >
             {item.name}
@@ -70,9 +78,7 @@ const Navbar = () => {
             MORE ▼
           </button>
           <ul
-            className={`absolute right-0 mt-2 w-48 bg-white shadow-lg border border-gray-200 rounded-lg py-2 transition-all duration-300 transform z-50 ${
-              dropdownOpen ? "opacity-100 scale-100" : "opacity-0 scale-95 pointer-events-none"
-            }`}
+            className={`absolute right-0 mt-2 w-48 bg-white shadow-lg border border-gray-200 rounded-lg py-2 transition-all duration-300 transform z-50 ${dropdownOpen ? "opacity-100 scale-100" : "opacity-0 scale-95 pointer-events-none"}`}
           >
             {[
               { name: "GIFT", path: "/giftcard" },
@@ -82,6 +88,7 @@ const Navbar = () => {
               <li key={item.name}>
                 <Link
                   to={item.path}
+                  onClick={handleLinkClick} // Zatvori meni nakon klika
                   className="block px-5 py-3 text-gray-800 hover:bg-gray-100 font-[Cardo] text-lg tracking-wide rounded-md"
                 >
                   {item.name}
@@ -100,9 +107,7 @@ const Navbar = () => {
 
       {/* Mobile Navigation */}
       <div
-        className={`absolute xl:hidden top-20 left-0 w-full bg-white text-black flex flex-col items-center gap-6 font-semibold text-base transition-all duration-300 ${
-          isOpen ? "block" : "hidden"
-        }`}
+        className={`absolute xl:hidden top-20 left-0 w-full bg-white text-black flex flex-col items-center gap-6 font-semibold text-base transition-all duration-300 ${isOpen ? "block" : "hidden"}`}
       >
         <ul className="w-full">
           {[
@@ -113,7 +118,7 @@ const Navbar = () => {
             { name: "About", path: "/aboutus" },
           ].map((item) => (
             <li key={item.name} className="w-full text-center p-4 border-b border-gray-200 font-[Cardo]">
-              <Link to={item.path} className="text-gray-700 hover:text-gray-900">
+              <Link to={item.path} onClick={handleLinkClick} className="text-gray-700 hover:text-gray-900">
                 {item.name}
               </Link>
             </li>
@@ -131,9 +136,7 @@ const Navbar = () => {
               MORE ▼
             </button>
             <ul
-              className={`w-full bg-white border-t border-gray-300 transition-all duration-300 ${
-                mobileDropdownOpen ? "block" : "hidden"
-              }`}
+              className={`w-full bg-white border-t border-gray-300 transition-all duration-300 ${mobileDropdownOpen ? "block" : "hidden"}`}
             >
               {[
                 { name: "GIFT", path: "/giftcard" },
@@ -143,6 +146,7 @@ const Navbar = () => {
                 <li key={item.name} className="w-full">
                   <Link
                     to={item.path}
+                    onClick={handleLinkClick} // Zatvori meni nakon klika
                     className="block w-full px-5 py-3 text-gray-700 hover:bg-gray-100 font-[Cardo]"
                   >
                     {item.name}

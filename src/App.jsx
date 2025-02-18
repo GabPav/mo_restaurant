@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 import Home from './pages/Home';
 import Menus from './pages/Menus';
 import Reservations from './pages/Reservations';
@@ -8,6 +9,7 @@ import AboutUs from './pages/AboutUs';
 import GiftCard from './pages/GiftCard';
 import Recipes from './pages/Recipes';
 import MainGallery from './pages/MainGallery';
+
 
 function App() {
   return (
@@ -24,6 +26,7 @@ function App() {
           <Route path="/recipes" element={<Recipes />} />
           <Route path="/maingallery" element={<MainGallery />} />
         </Routes>
+        <Footer />
       </Router>
     </div>
   );

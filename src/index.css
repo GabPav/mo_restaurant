@@ -2,3 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
 @import "tailwindcss";
 
+body {
+    background-color: #fef9f2;
+  }
