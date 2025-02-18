@@ -24,7 +24,7 @@ const About = ({
 
       {/* Section with image and text */}
       <div className="flex flex-col md:flex-row items-center justify-center gap-12 w-full">
-        {/* Slika */}
+        {/* Image */}
         <div className="w-full md:w-1/2 flex justify-center">
           <img
             src={imageSrc}

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import logo from "../assets/logo_white.png";
 import { FiMenu } from "react-icons/fi";
 
@@ -19,39 +20,42 @@ const Navbar = () => {
   }, []);
 
   return (
-    <header className="relative z-50 flex items-center justify-between bg-white text-black px-8 md:px-32 drop-shadow-md h-20">
+    <header className="fixed top-0 left-0 right-0 w-full z-50 bg-white shadow-md px-8 md:px-32 h-20 flex items-center justify-between">
       {/* Left Navigation - Desktop */}
       <ul className="hidden xl:flex items-center gap-12 font-semibold text-base">
-        {["HOME", "RESERVATION", "MENUS"].map((item) => (
-          <a
-            key={item}
-            href={`#${item.toLowerCase()}`}
+        {[
+          { name: "HOME", path: "/" },
+          { name: "RESERVATION", path: "/reservations" },
+          { name: "MENUS", path: "/menus" },
+        ].map((item) => (
+          <Link
+            key={item.name}
+            to={item.path}
             className="relative cursor-pointer text-gray-700 transition-all after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[1px] after:bg-amber-400 after:scale-x-0 hover:after:scale-x-100 after:origin-left after:transition-transform after:duration-300 font-[Cardo]"
           >
-            {item}
-          </a>
+            {item.name}
+          </Link>
         ))}
       </ul>
 
       {/* Logo Centered */}
       <div className="absolute left-1/2 transform -translate-x-1/2 flex items-center">
-        <img
-          src={logo}
-          alt="Company Logo"
-          className="h-20"
-        />
+        <img src={logo} alt="Company Logo" className="h-20" />
       </div>
 
       {/* Right Navigation - Desktop */}
       <ul className="hidden xl:flex items-center gap-12 font-semibold text-base">
-        {["CONTACT", "ABOUT"].map((item) => (
-          <a
-            key={item}
-            href={`#${item.toLowerCase()}`}
+        {[
+          { name: "CONTACT", path: "/contact" },
+          { name: "ABOUT", path: "/aboutus" },
+        ].map((item) => (
+          <Link
+            key={item.name}
+            to={item.path}
             className="relative cursor-pointer text-gray-700 transition-all after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[1px] after:bg-amber-400 after:scale-x-0 hover:after:scale-x-100 after:origin-left after:transition-transform after:duration-300 font-[Cardo]"
           >
-            {item}
-          </a>
+            {item.name}
+          </Link>
         ))}
 
         {/* MORE Dropdown - Desktop */}
@@ -70,14 +74,18 @@ const Navbar = () => {
               dropdownOpen ? "opacity-100 scale-100" : "opacity-0 scale-95 pointer-events-none"
             }`}
           >
-            {["GIFT", "GALLERY", "BEHIND THE PLATE"].map((item) => (
-              <li key={item}>
-                <a
-                  href={`#${item.toLowerCase().replace(/\s+/g, "-")}`}
+            {[
+              { name: "GIFT", path: "/giftcard" },
+              { name: "GALLERY", path: "/maingallery" },
+              { name: "BEHIND THE PLATE", path: "/recipes" },
+            ].map((item) => (
+              <li key={item.name}>
+                <Link
+                  to={item.path}
                   className="block px-5 py-3 text-gray-800 hover:bg-gray-100 font-[Cardo] text-lg tracking-wide rounded-md"
                 >
-                  {item}
-                </a>
+                  {item.name}
+                </Link>
               </li>
             ))}
           </ul>
@@ -85,10 +93,10 @@ const Navbar = () => {
       </ul>
 
       {/* Mobile Menu Icon */}
-      <FiMenu 
-   className="block text-4xl cursor-pointer xl:hidden text-amber-400 absolute right-8 md:left-6" 
-   onClick={() => setIsOpen(!isOpen)} 
-/>
+      <FiMenu
+        className="block text-4xl cursor-pointer xl:hidden text-amber-400 absolute right-8 md:left-6"
+        onClick={() => setIsOpen(!isOpen)}
+      />
 
       {/* Mobile Navigation */}
       <div
@@ -97,11 +105,17 @@ const Navbar = () => {
         }`}
       >
         <ul className="w-full">
-          {["Home", "Reservation", "Menus", "Contact", "About"].map((item) => (
-            <li key={item} className="w-full text-center p-4 border-b border-gray-200 font-[Cardo]">
-              <a href={`#${item.toLowerCase()}`} className="text-gray-700 hover:text-gray-900">
-                {item}
-              </a>
+          {[
+            { name: "Home", path: "/" },
+            { name: "Reservation", path: "/reservations" },
+            { name: "Menus", path: "/menus" },
+            { name: "Contact", path: "/contact" },
+            { name: "About", path: "/aboutus" },
+          ].map((item) => (
+            <li key={item.name} className="w-full text-center p-4 border-b border-gray-200 font-[Cardo]">
+              <Link to={item.path} className="text-gray-700 hover:text-gray-900">
+                {item.name}
+              </Link>
             </li>
           ))}
 
@@ -121,14 +135,18 @@ const Navbar = () => {
                 mobileDropdownOpen ? "block" : "hidden"
               }`}
             >
-              {["GIFT", "GALLERY", "BEHIND THE PLATE"].map((item) => (
-                <li key={item} className="w-full">
-                  <a
-                    href={`#${item.toLowerCase().replace(/\s+/g, "-")}`}
+              {[
+                { name: "GIFT", path: "/giftcard" },
+                { name: "GALLERY", path: "/maingallery" },
+                { name: "BEHIND THE PLATE", path: "/recipes" },
+              ].map((item) => (
+                <li key={item.name} className="w-full">
+                  <Link
+                    to={item.path}
                     className="block w-full px-5 py-3 text-gray-700 hover:bg-gray-100 font-[Cardo]"
                   >
-                    {item}
-                  </a>
+                    {item.name}
+                  </Link>
                 </li>
               ))}
             </ul>
