@@ -6,7 +6,6 @@ import FindUs from '../components/FindUs';
 import Gallery from '../components/Gallery';
 import Gift from '../components/Gift';
 import Newsletter from '../components/Newsletter';
-import Footer from '../components/Footer';
 import Img from '../components/Img';
 
 const Home = () => {
@@ -31,7 +30,6 @@ const Home = () => {
       <FindUs />
       <Gift />
       <Newsletter />
-      <Footer />
     </>
   );
 };
