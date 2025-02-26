@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import BookTable from "./components/BookTable";
 import Home from './pages/Home';
 import Menus from './pages/Menus';
 import Reservations from './pages/Reservations';
@@ -26,6 +27,7 @@ function App() {
           <Route path="/recipes" element={<Recipes />} />
           <Route path="/maingallery" element={<MainGallery />} />
         </Routes>
+        <BookTable />
         <Footer />
       </Router>
     </div>
