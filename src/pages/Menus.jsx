@@ -58,7 +58,7 @@ const Menus = () => {
           <div className="w-24 h-[2px] bg-amber-400 mt-2"></div>
         </div>
       </div>
-      <h1 className="text-4xl font-[Cardo] text-center text-amber-500 mb-10 mt-20">Exquisite flavors await</h1>
+      <h1 className="text-3xl font-[Cardo] text-center text-amber-500 mb-10 mt-20">Exquisite flavors await</h1>
 
       {/* Category Buttons */}
       <div className="flex flex-wrap justify-center gap-4 mb-10">

@@ -18,7 +18,8 @@ const BookTable = () => {
   };
 
   return (
-    <div className="sticky bottom-0 left-0 w-full bg-gray-900 text-amber-400 py-8 px-6 md:px-16 shadow-lg z-40">
+    <div className="sticky bottom-0 left-0 w-full bg-gray-900
+     text-amber-400 py-8 px-6 md:px-16 shadow-lg z-40">
       <form
         onSubmit={handleSubmit}
         className="flex flex-wrap items-center justify-center gap-6"

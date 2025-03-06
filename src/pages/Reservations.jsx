@@ -24,8 +24,10 @@ const Reservations = () => {
     <div  className="w-full min-h-screen bg-[url('https://images.unsplash.com/photo-1579027989536-b7b1f875659b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-cover  bg-center bg-no-repeat">
     <div className="max-w-6xl mx-auto  text-center ">
     <div className="max-w-3xl mx-auto px-6 py-16 mt-20 text-center">
-      <h1 className="text-4xl font-[Parisienne] text-amber-200 p-5">Book a Table <span className="text-3xl font-[Cardo]">– Reserve Your Spot</span></h1>
-      
+      <h1 className="text-4xl font-[Parisienne] text-amber-100 pt-5">Book a Table <span className="text-3xl font-[Cardo]">– Reserve Your Spot</span></h1>
+      <div className="flex justify-center mb-5">
+        <div className="w-48 h-[2px] bg-amber-400 mt-2"></div>
+      </div>
       
       <form
         onSubmit={handleSubmit}
