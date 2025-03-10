@@ -84,11 +84,11 @@ const GiftCard = () => {
         </div>
       </div>
 
-      <h1 className="text-4xl font-semibold font-[Parisienne] text-center text-amber-500 mb-10 mt-10">
+      <h1 className="text-4xl font-[Parisienne] text-center text-amber-500 mb-10 mt-10">
         Indulge in elegance
       </h1>
       <p className="font-[Cardo] text-center text-lg text-gray-900 mb-10">
-        Choose a gift voucher and surprise your loved ones with a taste of the extraordinary
+        Choose a gift voucher and surprise your loved ones with a taste of the extraordinary.
       </p>
 
       {/* Voucher Grid */}

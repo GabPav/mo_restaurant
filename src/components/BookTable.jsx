@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const BookTable = () => {
   const [formData, setFormData] = useState({
@@ -18,11 +19,20 @@ const BookTable = () => {
   };
 
   return (
-    <div className="sticky bottom-0 left-0 w-full bg-gray-900
-     text-amber-400 py-8 px-6 md:px-16 shadow-lg z-40">
+    <div className="sticky bottom-0 left-0 w-full bg-gray-900 text-amber-400 py-6 px-4 shadow-lg z-40">
+      {/* Button for smaller screens */}
+      <div className="flex justify-center md:hidden">
+        <Link to="/reservations">
+          <button className="bg-amber-500 text-gray-900 px-6 py-3 m-3 rounded-full hover:bg-amber-400 transition font-semibold">
+            Book a Table
+          </button>
+        </Link>
+      </div>
+
+      {/* Form for larger screens */}
       <form
         onSubmit={handleSubmit}
-        className="flex flex-wrap items-center justify-center gap-6"
+        className="hidden md:flex flex-wrap items-center justify-center gap-6 p-5"
       >
         <h3 className="text-3xl font-[Parisienne] mr-6 text-amber-400">
           Book a Table
