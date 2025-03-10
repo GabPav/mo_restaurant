@@ -61,17 +61,21 @@ const MainGallery = () => {
   return (
     <div className="w-full min-h-screen ">
       {/* Hero Image */}
-      <div className="w-full h-[300px] md:h-[400px]">
+      <div className="w-full h-[300px] md:h-[400px] relative">
         <img
           src="https://images.unsplash.com/photo-1481833761820-0509d3217039?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8MHx8fA%3D%3D"
           alt="Gallery Hero"
           className="w-full h-full object-cover"
         />
+        <div className="absolute inset-0 flex flex-col items-center justify-center">
+          <h1 className="text-4xl text-white font-[Cardo] mt-20">Our Gallery</h1>
+          <div className="w-24 h-[2px] bg-amber-400 mt-2"></div>
+        </div>
       </div>
       {/* Title & Description */}
       <div className="text-center py-8 px-4">
-        <h2 className="text-5xl font-bold font-[Parisienne] text-amber-400 pt-10 pb-5">
-          Gallery
+        <h2 className="text-3xl font-[Cardo] text-amber-400 pt-10 pb-5">
+        Step Into Elegance – <span className="text-4xl font-semibold font-[Parisienne]">View Our Gallery</span>
         </h2>
         <p className="text-lg text-gray-600 mt-2 font-[Cardo]">
           Join our story by tagging us with{" "}

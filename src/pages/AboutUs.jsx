@@ -11,7 +11,7 @@ const AboutUs = () => {
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 flex flex-col items-center justify-center mb-60">
-          <h1 className="text-5xl text-white font-[Cardo]">Our Story</h1>
+          <h1 className="text-4xl text-white font-[Cardo]">Our Story</h1>
           <div className="w-24 h-[2px] bg-amber-500 mt-2"></div>
         </div>
       </div>

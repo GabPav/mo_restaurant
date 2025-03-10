@@ -58,7 +58,13 @@ const Menus = () => {
           <div className="w-24 h-[2px] bg-amber-400 mt-2"></div>
         </div>
       </div>
-      <h1 className="text-4xl font-[Cardo] text-center text-amber-500 mb-10 mt-20">Exquisite flavors await</h1>
+      {/* Title & Description */}
+      <div className="text-center pb-8 px-4">
+      <h1 className="text-3xl font-[Cardo] text-center text-amber-500 mb-10 mt-20"><span className="text-4xl font-semibold font-[Parisienne]">Exquisite</span> flavors await</h1>
+      <p className="text-lg text-gray-600 mt-2 font-[Cardo]">
+      Discover a symphony of flavors crafted by our chefs. Explore our menu and indulge in an unforgettable dining experience.
+        </p>
+        </div>
 
       {/* Category Buttons */}
       <div className="flex flex-wrap justify-center gap-4 mb-10">
