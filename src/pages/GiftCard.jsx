@@ -13,17 +13,17 @@ const vouchers = {
     { name: "Gourmet Dinner for Two", price: "150€", img: "https://images.unsplash.com/photo-1639873179448-2e7eb329d3aa?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
     { name: "Michelin Star Experience", price: "250€", img: "https://images.unsplash.com/photo-1616671276441-2f2c277b8bf9?q=80&w=1974&auto=format&fit=crop" },
     { name: "Tasting Menu Delight", price: "180€", img: "https://images.unsplash.com/photo-1669490048328-0d1e075a2b7c?q=80&w=2132&auto=format&fit=crop" },
-    { "name": "Elegant Wine & Dine", "price": "200€", "img": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
-    { "name": "Luxury Five-Course Meal", "price": "220€", "img": "https://images.unsplash.com/photo-1600891964599-f61ba0e24092?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
-    { "name": "Romantic Candlelit Dinner", "price": "190€", "img": "https://images.unsplash.com/photo-1562050344-f7ad946cee35?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" }
+    { name: "Elegant Wine & Dine", price: "200€", img: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+    { name: "Luxury Five-Course Meal", price: "220€", img: "https://images.unsplash.com/photo-1600891964599-f61ba0e24092?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+    { name: "Romantic Candlelit Dinner", price: "190€", img: "https://images.unsplash.com/photo-1562050344-f7ad946cee35?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" }
   ],
   "exclusive-dining": [
     { name: "Private Dining Room Experience", price: "400€", img: "https://images.unsplash.com/photo-1617201835753-86a4c2a8c457?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
     { name: "Candlelit Rooftop Dinner", price: "350€", img: "https://images.unsplash.com/photo-1536392706976-e486e2ba97af?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
     { name: "Exclusive Chef’s Table", price: "500€", img: "https://images.unsplash.com/photo-1534604973900-c43ab4c2e0ab?q=80&w=1988&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
-    { "name": "VIP Sunset Dinner", "price": "450€", "img": "https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
-    { "name": "Gourmet Experience", "price": "600€", "img": "https://images.unsplash.com/photo-1498531872221-ce6d6216be71?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
-    { "name": "Majestic Banquet", "price": "700€", "img": "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" }
+    { name: "VIP Sunset Dinner", price: "450€", img: "https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+    { name: "Gourmet Experience", price: "600€", img: "https://images.unsplash.com/photo-1498531872221-ce6d6216be71?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+    { name: "Majestic Banquet", price: "700€", img: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" }
   ],
   "sommeliers-selection": [
     { name: "Private Wine Tasting", price: "120€", img: "https://images.unsplash.com/photo-1568213816046-0ee1c42bd559?q=80&w=2072&auto=format&fit=crop" },
@@ -48,7 +48,7 @@ const vouchers = {
     { "name": "Gourmet Truffle & Foie Gras Pairing", "price": "250€", "img": "https://images.unsplash.com/photo-1601170022284-3a8b1eedf844?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
     { "name": "Rare Vintage Wine Tasting", "price": "300€", "img": "https://images.unsplash.com/photo-1600534180079-557cdc0258d0?q=80&w=2036&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
     { "name": "Luxury Chocolate & Cognac Experience", "price": "220€", "img": "https://images.unsplash.com/photo-1514481372798-c8b2f7e6f708?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" }
-  ],
+  ]
 };
 
 const GiftCard = () => {
@@ -64,32 +64,30 @@ const GiftCard = () => {
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 flex flex-col items-center justify-center">
-          <h1 className="text-4xl text-white font-[Cardo] mt-30 pt-10">Gift Vouchers</h1>
+          <h1 className="text-4xl text-white font-[Cardo] mt-20">Gift Vouchers</h1>
           <div className="w-24 h-[2px] bg-amber-400 mt-2"></div>
-
-          {/* Dropdown Menu */}
-          <div className="flex justify-center mt-5 mb-10">
-            <select
-              className="px-6 py-3 border rounded-full text-lg font-[Cardo] text-amber-400 border-amber-500 bg-transparent focus:outline-none focus:ring-2 focus:ring-amber-400"
-              value={selectedCategory}
-              onChange={(e) => setSelectedCategory(e.target.value)}
-            >
-              {voucherCategories.map((category) => (
-                <option key={category.id} value={category.id}>
-                  {category.name}
-                </option>
-              ))}
-            </select>
-          </div>
         </div>
       </div>
 
       <h1 className="text-4xl font-[Parisienne] text-center text-amber-500 mb-10 mt-10">
-        Indulge in elegance
+        <span className="text-4xl font-[Cardo]">Select Your</span> Dream Experience
       </h1>
       <p className="font-[Cardo] text-center text-lg text-gray-900 mb-10">
         Choose a gift voucher and surprise your loved ones with a taste of the extraordinary.
       </p>
+
+      {/* Button Section */}
+      <div className="flex justify-center mb-10">
+        {voucherCategories.map((category) => (
+          <button
+            key={category.id}
+            className={`px-6 py-3 mx-2 border rounded-full text-lg font-[Cardo] ${selectedCategory === category.id ? "bg-amber-400 text-white" : "text-amber-400 border-amber-500"}`}
+            onClick={() => setSelectedCategory(category.id)}
+          >
+            {category.name}
+          </button>
+        ))}
+      </div>
 
       {/* Voucher Grid */}
       <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-20">
