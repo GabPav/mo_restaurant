@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
+import ScrollToTop from './components/ScrollToTop';
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import BookTable from "./components/BookTable";
@@ -15,6 +16,7 @@ function App() {
   return (
     <div className="w-full h-full absolute">
       <Router>
+      <ScrollToTop />
         <AppContent />
       </Router>
     </div>

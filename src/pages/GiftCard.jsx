@@ -69,7 +69,7 @@ const GiftCard = () => {
         </div>
       </div>
 
-      <h1 className="text-4xl font-[Parisienne] text-center text-amber-500 mb-10 mt-10">
+      <h1 className="text-4xl font-[Parisienne] text-center text-amber-500 mb-5 mt-10">
         <span className="text-4xl font-[Cardo]">Select Your</span> Dream Experience
       </h1>
       <p className="font-[Cardo] text-center text-lg text-gray-900 mb-10">

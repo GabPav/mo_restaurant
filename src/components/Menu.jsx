@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 const Menu = () => {
   return (
     <div className="relative flex flex-col items-center justify-center gap-12 px-6 md:px-16 py-10 mb-10">
@@ -11,6 +13,13 @@ const Menu = () => {
             prepared with the finest ingredients. From gourmet appetizers to indulgent desserts, every bite is a celebration 
             of culinary artistry.
           </p>
+
+          {/* Learn More Button - placed immediately below the description paragraph */}
+          <Link to="/menus">
+            <button className="px-6 py-3 text-lg font-semibold bg-amber-400 text-white rounded-lg shadow-md hover:bg-amber-500 transition duration-300 mt-6">
+              Learn More
+            </button>
+          </Link>
         </div>
 
         {/* Image */}
