@@ -1,16 +1,17 @@
-import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types'
 
 const About = ({ 
-  showIntro, 
-  imageSrc, 
-  title, 
-  description
+  showIntro = true, 
+  imageSrc, title, 
+  description, 
+  link = "/AboutUs", 
+  isWineList = false 
 }) => {
-  
   return (
     <section className="flex flex-col items-center px-6 md:px-16 py-10 gap-12 max-w-6xl mx-auto mt-15">
       {/* Intro section */}
-      {showIntro && (
+      {showIntro && !isWineList && (
         <div className="text-center pt-10">
           <h2 className="text-4xl font-semibold mb-6 font-[Cardo] text-gray-700">
             Discover the Art of Fine Dining at 
@@ -37,8 +38,26 @@ const About = ({
         <div className="w-full md:w-1/2 text-center md:text-left">
           <h2 className="text-4xl font-bold text-amber-400 mb-6 font-[Parisienne]">{title}</h2>
           <p className="text-lg text-gray-600 font-[Cardo]">{description}</p>
+
+          {/* Learn More Button */}
+          {!isWineList && (
+            <Link to={link}>
+              <button className="px-6 py-3 text-lg font-semibold bg-amber-400 text-white rounded-lg shadow-md hover:bg-amber-500 transition duration-300 mt-6">
+                Learn More
+              </button>
+            </Link>
+          )}
         </div>
       </div>
+
+      {/* Wine List Button */}
+      {isWineList && (
+        <Link to={link}>
+          <button className="px-6 py-3 text-lg font-semibold bg-amber-400 text-white rounded-lg shadow-md hover:bg-amber-500 transition duration-300 mt-6">
+            Learn More
+          </button>
+        </Link>
+      )}
     </section>
   );
 };
@@ -47,5 +66,7 @@ About.propTypes = {
   showIntro: PropTypes.string,
   imageSrc: PropTypes.string,
   title: PropTypes.string,
+  link: PropTypes.string,
+  isWineList: PropTypes.string,
 }
 export default About;
