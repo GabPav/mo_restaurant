@@ -21,6 +21,7 @@ const Navbar = () => {
   }, []);
 
   const handleLinkClick = () => {
+    console.log("Kliknuto na:", path);
     setDropdownOpen(false);
     setMobileDropdownOpen(false);
     setIsOpen(false);
@@ -33,7 +34,7 @@ const Navbar = () => {
           <Link
             key={item.name}
             to={item.path}
-            onClick={handleLinkClick}
+            onClick={() => handleLinkClick(item.path)}
             className={`relative cursor-pointer text-gray-700 transition-all after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[1px] after:bg-amber-400 after:transition-transform after:duration-300 font-[Cardo] ${location.pathname === item.path ? "after:scale-x-100" : "after:scale-x-0 hover:after:scale-x-100"}`}
           >
             {item.name}
@@ -50,7 +51,7 @@ const Navbar = () => {
           <Link
             key={item.name}
             to={item.path}
-            onClick={handleLinkClick}
+            onClick={() => handleLinkClick(item.path)}
             className={`relative cursor-pointer text-gray-700 transition-all after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[1px] after:bg-amber-400 after:transition-transform after:duration-300 font-[Cardo] ${location.pathname === item.path ? "after:scale-x-100" : "after:scale-x-0 hover:after:scale-x-100"}`}
           >
             {item.name}
@@ -70,11 +71,11 @@ const Navbar = () => {
           <ul
             className={`absolute right-0 mt-2 w-48 bg-white shadow-lg border border-gray-200 rounded-lg py-2 transition-all duration-300 transform z-50 ${dropdownOpen ? "opacity-100 scale-100" : "opacity-0 scale-95 pointer-events-none"}`}
           >
-            {[{ name: "GIFT", path: "/giftcard" }, { name: "GALLERY", path: "/maingallery" }, { name: "BEHIND THE PLATE", path: "/recipes" }].map((item) => (
+            {[{ name: "GIFT", path: "/giftcard" }, { name: "GALLERY", path: "/maingallery" }, { name: "BEHIND THE PLATE", path: "/blog" }].map((item) => (
               <li key={item.name}>
                 <Link
                   to={item.path}
-                  onClick={handleLinkClick}
+                  onClick={() => handleLinkClick(item.path)}
                   className="block px-5 py-3 text-gray-800 hover:bg-gray-100 font-[Cardo] text-lg tracking-wide rounded-md"
                 >
                   {item.name}
@@ -91,7 +92,7 @@ const Navbar = () => {
         <ul className="w-full">
           {[{ name: "Home", path: "/" }, { name: "Reservation", path: "/reservations" }, { name: "Menus", path: "/menus" }, { name: "Contact", path: "/contact" }, { name: "About", path: "/aboutus" }].map((item) => (
             <li key={item.name} className="w-full text-center p-4 border-b border-gray-200 font-[Cardo]">
-              <Link to={item.path} onClick={handleLinkClick} className="text-gray-700 hover:text-gray-900">
+              <Link to={item.path} onClick={() => handleLinkClick(item.path)} className="text-gray-700 hover:text-gray-900">
                 {item.name}
               </Link>
             </li>
@@ -102,9 +103,9 @@ const Navbar = () => {
               MORE ▼
             </button>
             <ul className={`w-full bg-white border-t border-gray-300 transition-all duration-300 ${mobileDropdownOpen ? "block" : "hidden"}`}>
-              {[{ name: "GIFT", path: "/giftcard" }, { name: "GALLERY", path: "/maingallery" }, { name: "BEHIND THE PLATE", path: "/recipes" }].map((item) => (
+              {[{ name: "GIFT", path: "/giftcard" }, { name: "GALLERY", path: "/maingallery" }, { name: "BEHIND THE PLATE", path: "/blog" }].map((item) => (
                 <li key={item.name} className="w-full">
-                  <Link to={item.path} onClick={handleLinkClick} className="block w-full px-5 py-3 text-gray-700 hover:bg-gray-100 font-[Cardo]">
+                  <Link to={item.path} onClick={() => handleLinkClick(item.path)} className="block w-full px-5 py-3 text-gray-700 hover:bg-gray-100 font-[Cardo]">
                     {item.name}
                   </Link>
                 </li>
