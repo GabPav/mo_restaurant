@@ -12,7 +12,7 @@ const Gift = () => {
       
       {/* Link to GiftCard page */}
       <Link to="/giftcard">
-        <button className="bg-gray-900 text-white text-lg px-6 py-3 rounded-full shadow-md hover:bg-amber-400 transition">
+        <button className="bg-gray-900 text-white font-[Cardo] text-lg px-6 py-3 rounded-full shadow-md hover:bg-amber-400 transition">
           Buy a Gift Card
         </button>
       </Link>

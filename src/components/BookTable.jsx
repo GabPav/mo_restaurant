@@ -19,7 +19,7 @@ const BookTable = () => {
   };
 
   return (
-    <div className="sticky bottom-0 left-0 w-full bg-gray-900 text-amber-400 py-6 px-4 shadow-lg z-40">
+    <div className="sticky bottom-0 left-0 w-full bg-gray-900 text-amber-400  shadow-lg z-40">
       {/* Button for smaller screens */}
       <div className="flex justify-center md:hidden">
         <Link to="/reservations">

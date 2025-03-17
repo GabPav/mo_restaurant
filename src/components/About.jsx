@@ -42,7 +42,7 @@ const About = ({
           {/* Learn More Button */}
           {!isWineList && (
             <Link to={link}>
-              <button className="px-6 py-3 text-lg font-semibold bg-amber-400 text-white rounded-lg shadow-md hover:bg-amber-500 transition duration-300 mt-6">
+              <button className="px-6 py-3 text-lg font-semibold font-[Cardo] bg-amber-400 text-white rounded-lg shadow-md hover:bg-amber-500 transition duration-300 mt-6">
                 Learn More
               </button>
             </Link>
@@ -53,7 +53,7 @@ const About = ({
       {/* Wine List Button */}
       {isWineList && (
         <Link to={link}>
-          <button className="px-6 py-3 text-lg font-semibold bg-amber-400 text-white rounded-lg shadow-md hover:bg-amber-500 transition duration-300 mt-6">
+          <button className="px-6 py-3 text-lg font-semibold font-[Cardo] bg-amber-400 text-white rounded-lg shadow-md hover:bg-amber-500 transition duration-300 mt-6">
             Learn More
           </button>
         </Link>
