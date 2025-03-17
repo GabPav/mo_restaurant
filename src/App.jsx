@@ -11,7 +11,7 @@ import AboutUs from "./pages/AboutUs";
 import GiftCard from "./pages/GiftCard";
 import Recipes from "./pages/Recipes";
 import MainGallery from "./pages/MainGallery";
-import Blog from "./pages/Blog";
+import BehindThePlate from "./pages/BehindThePlate";
 
 function App() {
   return (
@@ -41,7 +41,7 @@ function AppContent() {
         <Route path="/giftcard" element={<GiftCard />} />
         <Route path="/recipes" element={<Recipes />} />
         <Route path="/maingallery" element={<MainGallery />} />
-        <Route path="/blog" element={<Blog />} />
+        <Route path="/behindtheplate" element={<BehindThePlate />} />
       </Routes>
       {!hideBookTable && <BookTable />}
       <Footer />
