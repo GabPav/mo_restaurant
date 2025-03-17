@@ -12,6 +12,7 @@ import GiftCard from "./pages/GiftCard";
 import Recipes from "./pages/Recipes";
 import MainGallery from "./pages/MainGallery";
 import BehindThePlate from "./pages/BehindThePlate";
+import ArticlePage from "./pages/ArticlePage";
 
 function App() {
   return (
@@ -42,6 +43,7 @@ function AppContent() {
         <Route path="/recipes" element={<Recipes />} />
         <Route path="/maingallery" element={<MainGallery />} />
         <Route path="/behindtheplate" element={<BehindThePlate />} />
+        <Route path="/article/:id" element={<ArticlePage />} />
       </Routes>
       {!hideBookTable && <BookTable />}
       <Footer />
