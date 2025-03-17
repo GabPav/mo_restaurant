@@ -85,8 +85,8 @@ function ArticlePage() {
   }
 
   return (
-    <div className="max-w-6xl mx-auto p-5">
-      <h2 className="text-center mb-6 text-3xl font-semibold text-amber-500">{article.title}</h2>
+    <div className="max-w-6xl mx-auto p-6 pt-30">
+      <h2 className="text-center mb-6 text-3xl font-semibold font-[Cardo] text-amber-500">{article.title}</h2>
       <img 
         src={article.image} 
         alt={article.title} 
