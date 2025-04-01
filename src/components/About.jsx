@@ -3,7 +3,8 @@ import PropTypes from 'prop-types'
 
 const About = ({ 
   showIntro = true, 
-  imageSrc, title, 
+  imageSrc, 
+  title, 
   description, 
   link = "/AboutUs", 
   isWineList = false 
@@ -61,12 +62,15 @@ const About = ({
     </section>
   );
 };
+
+// Update PropTypes to expect boolean for showIntro and isWineList
 About.propTypes = {
   description: PropTypes.string,
-  showIntro: PropTypes.string,
+  showIntro: PropTypes.bool, // Change to boolean
   imageSrc: PropTypes.string,
   title: PropTypes.string,
   link: PropTypes.string,
-  isWineList: PropTypes.string,
-}
+  isWineList: PropTypes.bool, // Change to boolean
+};
+
 export default About;

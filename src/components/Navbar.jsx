@@ -10,6 +10,7 @@ const Navbar = () => {
   const location = useLocation();
 
   useEffect(() => {
+    // Close dropdown when clicking outside of it
     const handleClickOutside = (event) => {
       if (!event.target.closest(".dropdown-menu")) {
         setDropdownOpen(false);
@@ -21,7 +22,7 @@ const Navbar = () => {
   }, []);
 
   const handleLinkClick = () => {
-    console.log("Kliknuto na:", path);
+    console.log("Clicked on:", path);
     setDropdownOpen(false);
     setMobileDropdownOpen(false);
     setIsOpen(false);
@@ -29,6 +30,7 @@ const Navbar = () => {
 
   return (
     <header className="fixed top-0 left-0 right-0 w-full z-50 bg-white shadow-md px-8 md:px-32 h-20 flex items-center justify-between">
+      {/* Desktop navigation links (left side) */}
       <ul className="hidden xl:flex items-center gap-12 font-semibold text-base">
         {[{ name: "HOME", path: "/" }, { name: "RESERVATION", path: "/reservations" }, { name: "MENUS", path: "/menus" }].map((item) => (
           <Link
@@ -42,10 +44,12 @@ const Navbar = () => {
         ))}
       </ul>
 
+      {/* Logo centered in the navbar */}
       <div className="absolute left-1/2 transform -translate-x-1/2 flex items-center">
         <img src={logo} alt="Company Logo" className="h-20" />
       </div>
 
+      {/* Desktop navigation links (right side) */}
       <ul className="hidden xl:flex items-center gap-12 font-semibold text-base">
         {[{ name: "CONTACT", path: "/contact" }, { name: "ABOUT", path: "/aboutus" }].map((item) => (
           <Link
@@ -58,6 +62,7 @@ const Navbar = () => {
           </Link>
         ))}
 
+        {/* Dropdown menu for additional links */}
         <div className="relative dropdown-menu">
           <button
             onClick={(e) => {
@@ -86,8 +91,10 @@ const Navbar = () => {
         </div>
       </ul>
 
+      {/* Mobile menu icon */}
       <FiMenu className="block text-4xl cursor-pointer xl:hidden text-amber-400 absolute right-8 md:left-6" onClick={() => setIsOpen(!isOpen)} />
 
+      {/* Mobile navigation menu */}
       <div className={`absolute xl:hidden top-20 left-0 w-full bg-white text-black flex flex-col items-center gap-6 font-semibold text-base transition-all duration-300 ${isOpen ? "block" : "hidden"}`}>
         <ul className="w-full">
           {[{ name: "Home", path: "/" }, { name: "Reservation", path: "/reservations" }, { name: "Menus", path: "/menus" }, { name: "Contact", path: "/contact" }, { name: "About", path: "/aboutus" }].map((item) => (
@@ -98,6 +105,7 @@ const Navbar = () => {
             </li>
           ))}
 
+          {/* Dropdown menu for additional links on mobile */}
           <div className="w-full text-center dropdown-menu">
             <button onClick={(e) => { e.stopPropagation(); setMobileDropdownOpen(!mobileDropdownOpen); }} className="w-full p-4 bg-gray-100 hover:bg-gray-200 transition text-gray-700 font-[Cardo]">
               MORE ▼

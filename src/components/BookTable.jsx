@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 const BookTable = () => {
+  // State to manage form data
   const [formData, setFormData] = useState({
     date: "",
     time: "",
@@ -9,21 +10,23 @@ const BookTable = () => {
     name: "",
   });
 
+  // Handle input changes and update state
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
+  // Handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
     alert(`Table booked for ${formData.name} on ${formData.date} at ${formData.time}`);
   };
 
   return (
-    <div className="sticky bottom-0 left-0 w-full bg-gray-900 text-amber-400  shadow-lg z-40">
+    <div className="sticky bottom-0 left-0 w-full bg-gray-900 text-amber-400 shadow-lg z-40">
       {/* Button for smaller screens */}
       <div className="flex justify-center md:hidden">
         <Link to="/reservations">
-          <button className="bg-amber-500 text-gray-900 px-6 py-3 m-3 rounded-full hover:bg-amber-400 transition font-semibold">
+          <button className="bg-amber-500 text-white font-[Cardo] px-6 py-3 m-3 rounded-full hover:bg-amber-400 transition font-semibold">
             Book a Table
           </button>
         </Link>
@@ -34,10 +37,12 @@ const BookTable = () => {
         onSubmit={handleSubmit}
         className="hidden md:flex flex-wrap items-center justify-center gap-6 p-5"
       >
+        {/* Form title */}
         <h3 className="text-3xl font-[Parisienne] mr-6 text-amber-400">
           Book a Table
         </h3>
 
+        {/* Date input field */}
         <input
           type="date"
           name="date"
@@ -48,6 +53,7 @@ const BookTable = () => {
           required
         />
 
+        {/* Time input field */}
         <input
           type="time"
           name="time"
@@ -58,6 +64,7 @@ const BookTable = () => {
           required
         />
 
+        {/* Select dropdown for number of guests */}
         <select
           name="guests"
           value={formData.guests}
@@ -71,6 +78,7 @@ const BookTable = () => {
           ))}
         </select>
 
+        {/* Name input field */}
         <input
           type="text"
           name="name"
@@ -81,9 +89,10 @@ const BookTable = () => {
           required
         />
 
+        {/* Submit button */}
         <button
           type="submit"
-          className="bg-amber-500 text-gray-900 px-6 py-3 rounded-full hover:bg-amber-400 transition font-semibold"
+          className="bg-amber-500 text-white font-[Cardo] px-6 py-3 rounded-full hover:bg-amber-400 transition font-semibold"
         >
           Reserve Now
         </button>

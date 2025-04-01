@@ -1,5 +1,6 @@
-import { Link } from 'react-router-dom'; 
+import { Link } from 'react-router-dom';  
 
+// Array of articles with essential details
 const articles = [
   {
     id: 1,
@@ -39,23 +40,31 @@ const articles = [
   },
 ];
 
+// Main component that displays the articles
 export default function BehindThePlate() {
   return (
     <div className="min-h-screen bg-gray-100 p-6 pt-30 pb-10">
       <h1 className="text-4xl font-bold text-center font-[Parisienne] text-amber-400 mb-8">
         Behind the Plate
       </h1>
+      {/* Paragraph with introduction text */}
       <p className="font-[Cardo] text-center text-gray-700 max-w-4xl mx-auto mb-6">
         For all food lovers! Discover the secrets of gourmet cooking, learn how to pair wine like a pro, and explore the fascinating stories behind your favorite ingredients. Click on an article that interests you and dive into the world of flavors!
       </p>
+      {/* Grid layout to display articles */}
       <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
         {articles.map((article) => (
           <div key={article.id} className="bg-white rounded-lg shadow-md overflow-hidden">
+            {/* Link to the individual article page */}
             <Link to={`/article/${article.id}`}>
+              {/* Image of the article */}
               <img src={article.image} alt={article.title} className="w-full h-40 object-cover" />
               <div className="p-4">
+                {/* Article title */}
                 <h2 className="text-xl font-semibold text-gray-800 font-[Cardo]">{article.title}</h2>
+                {/* Article description */}
                 <p className="text-gray-600 mt-2 font-[Cardo]">{article.description}</p>
+                {/* Button to read more */}
                 <button className="mt-4 px-4 py-2 bg-orange-400 text-white rounded-lg hover:bg-orange-500 font-[Cardo]">
                   Read More
                 </button>
