@@ -4,10 +4,8 @@ import tailwindcss from '@tailwindcss/vite'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/mo_restaurant/', 
-  
   plugins: [react(), tailwindcss()],
-  
+  base: '/mo_restaurant/',
   server: {
     proxy: {
       '/wp-json': {
@@ -18,4 +16,3 @@ export default defineConfig({
     },
   },
 })
-
