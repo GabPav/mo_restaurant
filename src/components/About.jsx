@@ -10,10 +10,10 @@ const About = ({
   isWineList = false 
 }) => {
   return (
-    <section className="flex flex-col items-center px-6 md:px-16 py-10 gap-12 max-w-6xl mx-auto mt-15">
+    <section className="flex flex-col items-center px-6 md:px-16 py-4 sm:py-6 md:py-10 gap-12 max-w-6xl mx-auto mt-8 sm:mt-12 md:mt-15">
       {/* Intro section */}
       {showIntro && !isWineList && (
-        <div className="text-center pt-10">
+        <div className="text-center pt-4 sm:pt-6 md:pt-10">
           <h2 className="text-4xl font-semibold mb-6 font-[Cardo] text-gray-700">
             Discover the Art of Fine Dining at 
             <span className="font-[Parisienne] text-amber-400"> {`Maison de l'Orchidée`}</span>

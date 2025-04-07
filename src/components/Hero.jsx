@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const images = [
   {
@@ -33,14 +34,14 @@ const Hero = () => {
   };
 
   return (
-    <div className="relative w-full h-[90vh] flex flex-col">
+    <div className="relative w-full h-[70vh] sm:h-[80vh] md:h-[90vh] flex flex-col">
       {/* Slideshow */}
-      <div className="relative w-full h-[80vh] overflow-hidden">
+      <div className="relative w-full h-full overflow-hidden">
         <AnimatePresence mode="wait">
           <motion.img
             key={images[index].src}
             src={images[index].src}
-            alt={images[index].alt} // Added alt text specific to each image
+            alt={images[index].alt}
             className="absolute w-full h-full object-cover"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -48,23 +49,23 @@ const Hero = () => {
             transition={{ duration: 0.3 }}
           />
         </AnimatePresence>
-        
+
         {/* Navigation arrows */}
         <button 
-          className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-3 rounded-full hover:bg-opacity-70 transition"
+          className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-3 rounded-full hover:bg-opacity-70 transition hidden sm:block"
           onClick={prevSlide}
         >
           <ChevronLeft size={30} />
         </button>
         <button 
-          className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-3 rounded-full hover:bg-opacity-70 transition"
+          className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-3 rounded-full hover:bg-opacity-70 transition hidden sm:block"
           onClick={nextSlide}
         >
           <ChevronRight size={30} />
         </button>
-        
+
         {/* Indicators (circles) */}
-        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2">
+        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2 sm:flex hidden">
           {images.map((_, i) => (
             <button
               key={i}
@@ -77,9 +78,12 @@ const Hero = () => {
 
       {/* Reservation button */}
       <div className="w-full h-[10vh]">
-        <button className="w-full h-full text-xl font-semibold text-white bg-gray-900 hover:bg-amber-400 transition-all font-[Cardo]">
+        <Link
+          to="/reservations"
+          className="w-full h-full md:py-5 xl:py-13  flex items-center justify-center text-xl font-semibold text-white bg-gray-900 hover:bg-amber-400 transition-all font-[Cardo]"
+        >
           MAKE A RESERVATION
-        </button>
+        </Link>
       </div>
     </div>
   );

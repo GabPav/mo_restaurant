@@ -17,7 +17,7 @@ const FindUs = () => {
         <div className="w-full md:w-1/2 flex justify-center">
           <iframe
             title="Maison de l'Orchidée Location"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224346.82235971266!2d-74.25986590366776!3d40.697670063122775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDQxJzUxLjYiTiA3NMKwMTUnMjAuMyJX!5e0!3m2!1sen!2sus!4v1649092716781!5m2!1sen!2sus"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d417007.19521979026!2d2.3522!3d48.8566!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTIzIE1haW4gU3RyZWV0LCBQYXJpcywgRnJhbmNl!5e0!3m2!1sen!2sus!4v1678946769741!5m2!1sen!2sus"
             className="w-full max-w-md h-80 rounded-lg shadow-lg border-0"
             allowFullScreen=""
             loading="lazy"

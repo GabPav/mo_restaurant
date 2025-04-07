@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 
 const BookTable = () => {
   // State to manage form data
   const [formData, setFormData] = useState({
-    date: "",
-    time: "",
+    date: null,
+    time: null,
     guests: "2",
     name: "",
   });
@@ -18,7 +20,9 @@ const BookTable = () => {
   // Handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert(`Table booked for ${formData.name} on ${formData.date} at ${formData.time}`);
+    const formattedDate = formData.date ? formData.date.toLocaleDateString() : "";
+    const formattedTime = formData.time ? formData.time.toLocaleTimeString() : "";
+    alert(`Table booked for ${formData.name} on ${formattedDate} at ${formattedTime}`);
   };
 
   return (
@@ -33,35 +37,30 @@ const BookTable = () => {
       </div>
 
       {/* Form for larger screens */}
-      <form
-        onSubmit={handleSubmit}
-        className="hidden md:flex flex-wrap items-center justify-center gap-6 p-5"
-      >
+      <form onSubmit={handleSubmit} className="hidden md:flex flex-wrap items-center justify-center gap-6 p-5">
         {/* Form title */}
-        <h3 className="text-3xl font-[Parisienne] mr-6 text-amber-400">
-          Book a Table
-        </h3>
+        <h3 className="text-3xl font-[Parisienne] mr-6 text-amber-400">Book a Table</h3>
 
-        {/* Date input field */}
-        <input
-          type="date"
-          name="date"
-          value={formData.date}
-          onChange={handleChange}
+        {/* Date input field using DatePicker */}
+        <DatePicker
+          selected={formData.date}
+          onChange={(date) => setFormData({ ...formData, date })}
+          dateFormat="yyyy-MM-dd"
+          placeholderText="Pick a date"
           className="p-3 w-40 md:w-52 rounded-md bg-gray-800 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-amber-400"
-          style={{ accentColor: "#fbbf24", colorScheme: "dark" }}
-          required
         />
 
-        {/* Time input field */}
-        <input
-          type="time"
-          name="time"
-          value={formData.time}
-          onChange={handleChange}
+        {/* Time input field using DatePicker (showing only time picker) */}
+        <DatePicker
+          selected={formData.time}
+          onChange={(time) => setFormData({ ...formData, time })}
+          showTimeSelect
+          showTimeSelectOnly
+          timeIntervals={30}
+          timeCaption="Time"
+          dateFormat="HH:mm"
+          placeholderText="Pick a time"
           className="p-3 w-40 md:w-52 rounded-md bg-gray-800 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-amber-500"
-          style={{ accentColor: "#fbbf24", colorScheme: "dark" }}
-          required
         />
 
         {/* Select dropdown for number of guests */}

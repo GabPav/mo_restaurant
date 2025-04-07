@@ -1,6 +1,7 @@
 import { useRef } from "react";
 import { motion } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { useSwipeable } from "react-swipeable"; // Import swipeable hook
 
 const images = [
   {
@@ -44,8 +45,15 @@ const Gallery = () => {
     }
   };
 
+  // Use swipeable hook
+  const handlers = useSwipeable({
+    onSwipedLeft: () => scroll("right"),
+    onSwipedRight: () => scroll("left"),
+    preventDefaultTouchmoveEvent: true, // Optional to prevent page scroll during swipe
+  });
+
   return (
-    <div className="relative w-full mt-20">
+    <div className="relative w-full mt-20" {...handlers}>
       {/* Left arrow button */}
       <button
         onClick={() => scroll("left")}
@@ -59,7 +67,7 @@ const Gallery = () => {
       <div className="relative w-full">
         {/* Left fade effect */}
         <div className="absolute left-0 top-0 bottom-0 w-10 bg-gradient-to-r from-white to-transparent pointer-events-none hidden sm:block"></div>
-        
+
         {/* Image slider */}
         <div ref={scrollRef} className="flex overflow-hidden space-x-2 w-full">
           {images.map((image, index) => (

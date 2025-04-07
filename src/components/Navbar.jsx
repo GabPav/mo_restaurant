@@ -21,7 +21,7 @@ const Navbar = () => {
     return () => document.removeEventListener("click", handleClickOutside);
   }, []);
 
-  const handleLinkClick = () => {
+  const handleLinkClick = (path) => {
     console.log("Clicked on:", path);
     setDropdownOpen(false);
     setMobileDropdownOpen(false);
@@ -46,7 +46,7 @@ const Navbar = () => {
 
       {/* Logo centered in the navbar */}
       <div className="absolute left-1/2 transform -translate-x-1/2 flex items-center">
-        <img src={logo} alt="Company Logo" className="h-20" />
+        <img src={logo} alt="Company Logo" className="h-20 max-h-16 w-auto object-contain sm:h-16" />
       </div>
 
       {/* Desktop navigation links (right side) */}
@@ -111,7 +111,7 @@ const Navbar = () => {
               MORE ▼
             </button>
             <ul className={`w-full bg-white border-t border-gray-300 transition-all duration-300 ${mobileDropdownOpen ? "block" : "hidden"}`}>
-              {[{ name: "GIFT", path: "/giftcard" }, { name: "GALLERY", path: "/maingallery" }, { name: "BEHIND THE PLATE", path: "/behindtheplate" }].map((item) => (
+              {[{ name: "Gift", path: "/giftcard" }, { name: "Gallery", path: "/maingallery" }, { name: "Behind the plate", path: "/behindtheplate" }].map((item) => (
                 <li key={item.name} className="w-full">
                   <Link to={item.path} onClick={() => handleLinkClick(item.path)} className="block w-full px-5 py-3 text-gray-700 hover:bg-gray-100 font-[Cardo]">
                     {item.name}

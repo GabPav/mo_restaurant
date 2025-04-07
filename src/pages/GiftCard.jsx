@@ -72,17 +72,21 @@ const GiftCard = () => {
       <h1 className="text-4xl font-[Parisienne] text-center text-amber-500 mb-5 mt-10">
         <span className="text-4xl font-[Cardo]">Select Your</span> Dream Experience
       </h1>
-      <p className="font-[Cardo] text-center text-lg text-gray-900 mb-10">
+      <p className="font-[Cardo] text-center text-lg text-gray-900 mb-10 sm:mx-10">
         Choose a gift voucher and surprise your loved ones with a taste of the extraordinary.
       </p>
 
       {/* Button Section */}
-      <div className="flex justify-center mb-10">
+      <div className="flex flex-wrap justify-center gap-4 mb-10">
         {voucherCategories.map((category) => (
           <button
             key={category.id}
-            className={`px-6 py-3 mx-2 border rounded-full text-lg font-[Cardo] ${selectedCategory === category.id ? "bg-amber-400 text-white" : "text-amber-400 border-amber-500"}`}
             onClick={() => setSelectedCategory(category.id)}
+            className={`px-6 py-3 border rounded-full text-lg font-[Cardo] transition-all duration-300 ${
+              selectedCategory === category.id
+                ? "bg-amber-500 text-white"
+                : "border-amber-500 text-amber-500 hover:bg-amber-500 hover:text-white"
+            }`}
           >
             {category.name}
           </button>
