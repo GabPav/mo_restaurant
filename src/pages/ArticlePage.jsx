@@ -25,7 +25,7 @@ const articles = [
     image: "https://images.unsplash.com/photo-1519092796169-bb9cc75a4b68?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     description: "Learn how to pair wine with different dishes like a pro.",
     content: `
-      <p class="mb-4>Pairing wine with food is more than just matching red with meat and white with fish — it’s an art form rooted in balance, contrast, and harmony. For centuries, sommeliers and chefs have worked hand in hand to uncover the subtle relationships between flavor, aroma, and texture that elevate a meal from ordinary to unforgettable.</p>
+      <p class="mb-4">Pairing wine with food is more than just matching red with meat and white with fish — it’s an art form rooted in balance, contrast, and harmony. For centuries, sommeliers and chefs have worked hand in hand to uncover the subtle relationships between flavor, aroma, and texture that elevate a meal from ordinary to unforgettable.</p>
 
       <p class="mb-4">At the heart of a perfect pairing lies the principle of balance. A bold dish calls for an equally bold wine. Think of a rich beef bourguignon alongside a full-bodied Cabernet Sauvignon — the depth of the wine complements the savory complexity of the dish. On the other hand, a delicate poached sole might be overwhelmed by such intensity and instead sings when served with a crisp, citrusy Sauvignon Blanc.</p>
 
@@ -46,7 +46,7 @@ const articles = [
     image: "https://images.unsplash.com/photo-1601170022270-39cac948bfdc?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     description: "Why truffles are considered the diamonds of the kitchen.",
     content: `
-      <p class="mb-4>There’s a certain mystique surrounding truffles — a sense of rarity, indulgence, and almost mythical allure. Often referred to as “the diamonds of the kitchen,” truffles have earned their nickname not just because of their price, but because of their deep, earthy aroma and ability to transform even the simplest of dishes into something extraordinary.</p>
+      <p class="mb-4">There’s a certain mystique surrounding truffles — a sense of rarity, indulgence, and almost mythical allure. Often referred to as “the diamonds of the kitchen,” truffles have earned their nickname not just because of their price, but because of their deep, earthy aroma and ability to transform even the simplest of dishes into something extraordinary.</p>
 
       <p class="mb-4">Truffles grow underground, in a delicate symbiosis with the roots of trees like oaks and hazelnuts. Their elusive nature makes them incredibly hard to find. Truffle hunters, often accompanied by specially trained dogs, roam forests in the early hours of the morning, searching for this buried treasure. The window of opportunity is brief — truffles are highly seasonal, and once unearthed, they have a very short shelf life.</p>
 
@@ -65,7 +65,7 @@ const articles = [
     image: "https://images.unsplash.com/photo-1592878912415-353c89227af4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     description: "How fermentation transforms simple ingredients into gourmet delicacies.",
     content: `
-      <p class="mb-4>At first glance, fermentation might seem like little more than food left out a bit too long — a curious mix of time and microbes. But in the hands of skilled chefs, artisans, and centuries-old traditions, fermentation becomes one of the most powerful culinary tools for unlocking flavor, texture, and depth. It’s the invisible magic behind some of the world’s most beloved gourmet delicacies.</p>
+      <p class="mb-4">At first glance, fermentation might seem like little more than food left out a bit too long — a curious mix of time and microbes. But in the hands of skilled chefs, artisans, and centuries-old traditions, fermentation becomes one of the most powerful culinary tools for unlocking flavor, texture, and depth. It’s the invisible magic behind some of the world’s most beloved gourmet delicacies.</p>
 
       <p class="mb-4">Fermentation is a natural metabolic process in which microorganisms like bacteria, yeasts, or molds break down sugars and starches. While that may sound technical, the results are anything but sterile. Think of velvety Brie, rich soy sauce, complex wines, or a crusty sourdough loaf — all owe their existence to the quiet alchemy of fermentation.</p>
 
@@ -79,9 +79,7 @@ const articles = [
 
       <p class="mb-4">In modern gastronomy, fermentation is enjoying a renaissance. Chefs now cultivate their own starters, kombucha cultures, and fermentation labs to explore new frontiers in flavor. It’s not just about following old recipes — it’s about experimentation and discovery.</p>
 
-      <p class="mb-4">So the next time you bite into a fermented delicacy, remember: you’re tasting the work of time, nature, and invisible allies. Fermentation isn’t just a technique — it’s transformation. And through it, the humble becomes the extraordinary.
-
-</p>
+      <p class="mb-4">So the next time you bite into a fermented delicacy, remember: you’re tasting the work of time, nature, and invisible allies. Fermentation isn’t just a technique — it’s transformation. And through it, the humble becomes the extraordinary.</p>
     `
   },
   {
@@ -90,7 +88,7 @@ const articles = [
     image: "https://images.unsplash.com/photo-1707995548052-cfca47bfb6db?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     description: "How to enjoy seafood responsibly while preserving ocean ecosystems.",
     content: `
-      <p class="mb-4>Seafood has long been a cornerstone of global cuisine — from delicate oysters served on the half shell in France, to rich, savory bowls of ramen with slices of tender fish in Japan. But behind every plate of seafood lies a much larger story: the health of our oceans. As appetites for fish and shellfish grow worldwide, so does the pressure on marine ecosystems. The good news? We can still enjoy seafood while making choices that help protect the ocean’s delicate balance.</p>
+      <p class="mb-4">Seafood has long been a cornerstone of global cuisine — from delicate oysters served on the half shell in France, to rich, savory bowls of ramen with slices of tender fish in Japan. But behind every plate of seafood lies a much larger story: the health of our oceans. As appetites for fish and shellfish grow worldwide, so does the pressure on marine ecosystems. The good news? We can still enjoy seafood while making choices that help protect the ocean’s delicate balance.</p>
 
       <p class="mb-4">Sustainable seafood means fish or shellfish caught or farmed in ways that consider the long-term vitality of the species and the well-being of the oceans. Overfishing, destructive harvesting methods, and unregulated aquaculture can lead to collapsed populations, damaged habitats, and bycatch — the accidental capture of non-target species like turtles, dolphins, and seabirds.</p>
 
@@ -120,7 +118,7 @@ const articles = [
     image: "https://images.unsplash.com/photo-1695606452817-e28a67339e57?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     description: "A deep dive into the world of handcrafted cheeses and their rich flavors.",
     content: `
-      <p class="mb-4>Cheese is more than just food — it's a story, a craft, and, in many ways, a celebration of tradition. While supermarket shelves are stacked with familiar blocks of cheddar or mozzarella, there's an entire world of artisan cheese that offers a far richer and more nuanced tasting experience. Made by skilled cheesemakers using time-honored methods, handcrafted cheeses are the heart and soul of dairy alchemy.</p>
+      <p class="mb-4">Cheese is more than just food — it's a story, a craft, and, in many ways, a celebration of tradition. While supermarket shelves are stacked with familiar blocks of cheddar or mozzarella, there's an entire world of artisan cheese that offers a far richer and more nuanced tasting experience. Made by skilled cheesemakers using time-honored methods, handcrafted cheeses are the heart and soul of dairy alchemy.</p>
 
       So, what makes artisan cheese different?</p>
 
