@@ -46,7 +46,13 @@ const Navbar = () => {
 
       {/* Logo centered in the navbar */}
       <div className="absolute left-1/2 transform -translate-x-1/2 flex items-center">
-        <img src={logo} alt="Company Logo" className="h-16 max-h-20 w-auto object-contain sm:h-20" />
+      <Link to="/" onClick={() => handleLinkClick("/")}>
+    <img
+      src={logo}
+      alt="Company Logo"
+      className="h-16 max-h-20 w-auto object-contain sm:h-20 cursor-pointer"
+    />
+  </Link>
       </div>
 
       {/* Desktop navigation links (right side) */}

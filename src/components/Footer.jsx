@@ -21,7 +21,7 @@ const Footer = () => {
 
         {/* Logo */}
         <div className="md:w-1/3 flex justify-center p-5">
-          <img src={logo} alt="Maison de l'Orchidée Logo" className="h-20 md:h-24" />
+          <img src={logo} alt="Maison de l'Orchidée Logo" className="h-20 md:h-24" loading="lazy" />
         </div>
 
         {/* Copyright */}

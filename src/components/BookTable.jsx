@@ -20,6 +20,10 @@ const BookTable = () => {
   // Handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (!formData.date || !formData.time || !formData.name || !formData.guests) {
+      alert("Please fill out all fields before submitting the form.");
+      return;
+    }
     const formattedDate = formData.date ? formData.date.toLocaleDateString() : "";
     const formattedTime = formData.time ? formData.time.toLocaleTimeString() : "";
     alert(`Table booked for ${formData.name} on ${formattedDate} at ${formattedTime}`);

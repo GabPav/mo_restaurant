@@ -58,7 +58,7 @@ export default function BehindThePlate() {
             {/* Link to the individual article page */}
             <Link to={`/article/${article.id}`}>
               {/* Image of the article */}
-              <img src={article.image} alt={article.title} className="w-full h-40 object-cover" />
+              <img src={article.image} alt={article.title} loading="lazy" className="w-full h-40 object-cover" />
               <div className="p-4">
                 {/* Article title */}
                 <h2 className="text-xl font-semibold text-gray-800 font-[Cardo]">{article.title}</h2>

@@ -61,6 +61,7 @@ const GiftCard = () => {
         <img
           src="https://images.unsplash.com/photo-1579869696034-ec145eb3987c?q=80&w=2070&auto=format&fit=crop"
           alt="Gift Vouchers"
+          loading="lazy"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 flex flex-col items-center justify-center">
@@ -97,7 +98,7 @@ const GiftCard = () => {
       <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-20">
         {vouchers[selectedCategory].map((voucher, index) => (
           <div key={index} className="bg-white shadow-lg rounded-lg overflow-hidden">
-            <img src={voucher.img} alt={voucher.name} className="w-full h-48 object-cover" />
+            <img src={voucher.img} alt={voucher.name} loading="lazy" className="w-full h-48 object-cover" />
             <div className="p-5 text-center">
               <h3 className="text-xl font-[Cardo] text-gray-900">{voucher.name}</h3>
               <p className="text-sm text-gray-500">From</p>

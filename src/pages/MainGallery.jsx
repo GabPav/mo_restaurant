@@ -53,18 +53,38 @@ const images = [
 
 const MainGallery = () => {
   const [visibleCount, setVisibleCount] = useState(6);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   const showMoreImages = () => {
     setVisibleCount(images.length);
   };
 
+  const openModal = (index) => {
+    setCurrentIndex(index);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+
+  const goToPrev = () => {
+    setCurrentIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1));
+  };
+
+  const goToNext = () => {
+    setCurrentIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1));
+  };
+
   return (
-    <div className="w-full min-h-screen ">
+    <div className="w-full min-h-screen">
       {/* Hero Image */}
       <div className="w-full h-[300px] md:h-[400px] relative">
         <img
           src="https://images.unsplash.com/photo-1481833761820-0509d3217039?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8MHx8fA%3D%3D"
           alt="Gallery Hero"
+          loading="lazy"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 flex flex-col items-center justify-center">
@@ -72,10 +92,12 @@ const MainGallery = () => {
           <div className="w-24 h-[2px] bg-amber-400 mt-2"></div>
         </div>
       </div>
+
       {/* Title & Description */}
       <div className="text-center py-8 px-4">
         <h2 className="text-3xl font-[Cardo] text-amber-400 pt-10 pb-5">
-        Step Into Elegance – <span className="text-4xl font-semibold font-[Parisienne]">View Our Gallery</span>
+          Step Into Elegance –{" "}
+          <span className="text-4xl font-semibold font-[Parisienne]">View Our Gallery</span>
         </h2>
         <p className="text-lg text-gray-600 mt-2 font-[Cardo]">
           Join our story by tagging us with{" "}
@@ -90,7 +112,8 @@ const MainGallery = () => {
             key={index}
             src={image.src}
             alt={image.alt}
-            className="w-full h-64 object-cover rounded-lg shadow-md transition-all duration-300 hover:ring-4 hover:ring-amber-300"
+            onClick={() => openModal(index)}
+            className="w-full h-64 object-cover rounded-lg shadow-md cursor-pointer transition-all duration-300 hover:ring-4 hover:ring-amber-300"
           />
         ))}
       </div>
@@ -103,6 +126,42 @@ const MainGallery = () => {
             className="px-6 py-2 bg-amber-500 text-white font-semibold rounded-lg shadow-md hover:bg-amber-600 transition-all"
           >
             See More
+          </button>
+        </div>
+      )}
+
+      {/* Modal */}
+      {isModalOpen && (
+        <div className="fixed inset-0 z-50 bg-black bg-opacity-80 flex items-center justify-center transition-all duration-300">
+          {/* Close */}
+          <button
+            onClick={closeModal}
+            className="absolute top-5 right-5 text-white text-3xl font-bold hover:text-amber-400"
+          >
+            &times;
+          </button>
+
+          {/* Prev */}
+          <button
+            onClick={goToPrev}
+            className="absolute left-4 text-white text-5xl font-bold hover:text-amber-400"
+          >
+            &#10094;
+          </button>
+
+          {/* Image */}
+          <img
+            src={images[currentIndex].src}
+            alt={images[currentIndex].alt}
+            className="max-h-[90vh] max-w-[90vw] object-contain rounded-lg shadow-xl"
+          />
+
+          {/* Next */}
+          <button
+            onClick={goToNext}
+            className="absolute right-4 text-white text-5xl font-bold hover:text-amber-400"
+          >
+            &#10095;
           </button>
         </div>
       )}

@@ -27,6 +27,7 @@ const Menu = () => {
           <img
             src="https://images.unsplash.com/photo-1565895405137-3ca0cc5088c8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHJlc3RhdXJhbnQlMjBtZW51fGVufDB8MHwwfHx8Mg%3D%3D"
             alt="A woman enjoying a delicious meal at a table"
+            loading="lazy"
             className="w-full max-w-md h-auto rounded-lg shadow-lg"
           />
         </div>
